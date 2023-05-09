@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@500;700&display=swap');
+:root{
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dar-violet: hsl(278, 68%, 11%);
+/*For linear gradient color active border var to var*/
+--blue:hsl(249, 99%, 64%);
+--purple: hsl(278, 94%, 30%);
+/*Not part of linear gradient*/
+--Red /*(input errors)*/: hsl(0, 100%, 66%);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+#hidden{
+    display: none;
+}
+
+#form{
+    display: block;
+}
+
+body{
+    min-height: 100vh;
+    /*background-color: red;*/
+    
+    
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    
+}
+
+ .left-side{
+    min-height: 100vh;
+    width: 40%;
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    background-image: linear-gradient(to right, var(--Very-dar-violet), var(--Very-dar-violet));
+
+}
+
+.cards{
+transform: translate(60%, 60%);
+}
+
+.card-left{
+    transform: translateX(-20%);
+    margin-top: -250px;
+}
+
+.stamp{
+    position: absolute;
+    top: 1rem;
+    left: 1.3rem;
+}
+
+#number{
+    position: absolute;
+    top: 9rem;
+    left: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    color: var(--White);
+}
+
+.card-name{
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+    top: -3rem;
+    left: 1.3rem;
+    right: 3rem;
+    color: var(--White);
+}
+
+#card-holder-name{
+    color: var(--White);
+}
+
+#date{
+    margin-right: 150px;
+}
+
+
+#cvc{
+    position: absolute;
+    top: 23.5rem;
+    left: 22.5rem;
+    color: var(--White);
+}
+
+#cvc-number{
+position: relative;
+left: -4rem;
+margin-top: 1.65rem;
+}
+
+.right-side{
+    padding-left: 20rem;
+}
+
+.cardholder-name, .cardholder-number{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 1rem 0;
+}
+
+label{
+color: var(--Very-dar-violet);
+font-weight: 700;
+font-size: 100;
+}
+
+input{
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--Dark-grayish-violet);
+    outline: none;
+}
+
+input::placeholder{
+    font-family: inherit;
+    color: var(--Dark-grayish-violet);
+}
+
+input:hover{
+    cursor: pointer;
+    outline: 1px solid var(--purple);
+}
+
+#card-name{
+    margin: 1rem 0;
+    padding: .5rem;
+    border-radius: 5px ;
+}
+
+.yearMonth{
+    display: flex;
+    margin: .07rem  -5rem 1rem .09rem;
+}
+
+#card-month, #card-year{
+    width: 4rem;
+    margin-inline: 3px;
+}
+
+.cvc{
+    display: flex;
+    position: absolute;
+    top: 19.2rem;
+    left: 68rem;
+}
+
+#cvc1{
+    position: relative;
+    top: 1.65rem;
+    right: 4rem;
+}
+
+.cvc-input{
+    margin: 2.1rem 0 0 -2rem;
+    width: 14rem;
+}
+
+button{
+    width: 24rem;
+    background-color: var(--Very-dar-violet);
+    color: var(--White);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--Very-dar-violet);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--Dark-grayish-violet);
+    color: var(--Very-dar-violet);
+}
+
+.second-card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    top: 10rem;
+    left: 50rem;
+    position: absolute;
+    gap: 5rem;
+    padding-left: 40px;
+}
+
+.good-logo, .second-card h1, .second-card p {
+    margin-bottom: 2rem;
+}
+
+.second-card h1{
+    text-transform: uppercase;
+    color: var(--Very-dar-violet);
+    font-weight: 200;
+    letter-spacing: .1em;
+}
+
+.second-card p{
+    color: var(--Dark-grayish-violet);
+}
+
+#end{
+width:20rem; 
+}
+
+@media screen and (max-width: 1023px){
+    
+    .container{
+        min-height: 100vh;
+    }
+    .left-side, .cards{
+        width: 12rem;
+    }
+
+    .logo{
+        position: relative;
+        top: 5rem;
+        width: 20rem;
+        
+    }
+
+    .stamp{
+        width: 50px;
+        top: 6rem
+    }
+
+    #number{
+        width: max-content;
+        font-size: 20px;
+        letter-spacing: 0.3rem;
+        top: 11rem;
+    }
+
+    .card-name{
+        display: flex;
+        top: 2.7rem;
+        /*flex-direction: column;*/
+    }
+    #date{
+        display: flex;
+        position: absolute;
+        left: 15em;
+    }
+
+    .card-back{
+        position: relative;
+        top: 3rem;
+        width: 20rem;
+    }
+
+    #cvc{
+        position: absolute;
+        top: 7.7rem;
+        left: 16rem;
+        color: var(--White);
+    }
+
+    .right-side{
+        margin-left: -60px;
+        margin-top: -35em;
+        }
+
+    #cvc1{
+        left: -30em;
+        top: -1.15em;
+    }
+
+    .cvc-input{
+        margin: 2.1rem 0 0 -7rem;
+        width: 13em;
+    }
+
+    input{
+        width: 25em;
+    }
+
+    button{
+        width: 18.55em;
+    }
+}
+
+@media screen and (max-width: 767px){
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+    
+    .left-side{
+        margin-top: -15em;
+        width: 100%;
+        min-height: 10vh;
+    }
+
+    .right-side{
+        margin: 0;
+        
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-left{
+        margin-bottom: 190px;
+        z-index: 1;
+        margin-left: 90px;
+    }
+
+    .card-back{
+        top: -50px;
+        margin-left: 20px;
+    }
+
+    #cvc{
+        top: -20rem;
+    }
+
+    #cvc-number{
+        position: relative;
+        left: -54.5rem;
+        margin-top: 6.2rem;
+        }
+
+    .right-side{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        margin-left: -300px;
+        margin-top: 70px;
+    }
+
+    label{
+        font-size: 14px;
+    }
+
+    #cvc1{
+        top: 6.2rem;
+        left: -59em;
+        padding-left: 10px;
+        height: 34px;
+        width: 13.5em;
+    }
+    .second-card{
+        margin-top: 15rem;
+        margin-left: -47rem;
+        margin-bottom: -10px;
+    }
+    #hidden{
+        display: none;
+    }
+   
+    .good-logo{
+        margin-top: -20px;
+        margin-bottom: 11px;
+    }
+
+    .second-card H1 {
+    margin-bottom: -2px;
+    }
+
+}
